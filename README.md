@@ -14,11 +14,21 @@ A graph visualisation of counterplay in Rainbow Six Siege.
 
 ## Dependencies
 * Uses [neo4dj3](https://github.com/eisman/neo4jd3) for graph visualisation.
-* Uses [marcopixel r6-operatoricons](https://marcopixel.eu/r6-operatoricons/) for all the vector operator icons.
+* Uses [marcopixel's r6operators](https://r6operators.marcopixel.eu) for all the vector operator icons.
 
 ## Running
 
-Clone the repository, install all dependencies, build and serve the project.
+Make sure you are using node version 12.16.1 and npm version 6.13.4 on your system at minimum.
+To check your versions you can run the following commands:
+
+```
+node --version
+npm --version
+```
+
+To update to the latest node and npm version, visit https://nodejs.org/en/.
+
+After, clone the repository, install all dependencies, build and serve the project.
 
 ```bash
 > git clone https://github.com/BurkusCat/r6-operator-counters.git
@@ -27,6 +37,12 @@ Clone the repository, install all dependencies, build and serve the project.
 ```
 
 Open `http://localhost:8080` in your favorite browser.
+
+### Building the project for a release
+
+Use the `gulp build` command to build a static version of the website to the "dist" folder. This will prepare all the site assets and optimise them to be hosted in an AWS S3 storage bucket.
+
+During the gulp build, if their is an error during the `npm run createjson` portion, gulp will not tell you a specific error. To see the specific error you must run `npm run createjson` from the console.
 
 ## How to contribute
 
@@ -60,4 +76,4 @@ https://raw.githubusercontent.com/BurkusCat/r6-operator-counters/master/src/main
 
 ## Copyright and license
 
-Code and documentation copyright 2018 the author. Code released under the [MIT license](LICENSE). Docs released under [Creative Commons](docs/LICENSE).
+Code and documentation copyright 2019 the author. Code released under the [MIT license](LICENSE). Docs released under [Creative Commons](docs/LICENSE).
